@@ -74,7 +74,7 @@ async def main():
         user_ids = [line.strip() for line in f if line.strip()]
 
     while True:
-        r = requests.get("https://raw.githubusercontent.com/yheelah/gras/refs/heads/main/proxy.txt")
+        r = requests.get("https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/all.txt")
         if r.status_code == 200:
             with open('socks5.txt', 'wb') as f:
                 for chunk in r:
